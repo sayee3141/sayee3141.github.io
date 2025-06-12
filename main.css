@@ -7,9 +7,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'delta_rayregular';
     src: url('deltaray-webfont.woff2') format('woff2'),
@@ -17,6 +14,24 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+.fancy-welcome-div {
+  font-family: 'delta_ray_bevel_italicregular';
+  position: fixed;
+  bottom:0;
+  left:0;
+  font-size: 60px;
+  padding-left: 20px;
+  
+}
+.smallwelc {
+  font-family: 'delta_rayregular';
+  position:fixed;
+  font-size: 20px;
+  padding-left: 20px;
+  bottom:0;
+  left:0;
 }
 body {
   background-color: #6B6259;
