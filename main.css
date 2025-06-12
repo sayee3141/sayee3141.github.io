@@ -25,6 +25,16 @@
   padding-left: 20px;
   
 }
+
+.button {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button:hover {
+  color: white;
+}
+
 .smallwelc {
   font-family: 'delta_rayregular';
   position:fixed;
