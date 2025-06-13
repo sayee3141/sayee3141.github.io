@@ -1,18 +1,27 @@
+<!DOCTYPE html>
 <html>
-    
+<head>
+    <meta charset="UTF-8">
     <title>a thing</title>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="main.css">
-    </head>
-    <body>
-
-        <div class="fancy-welcome-div">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+        // Wait until the DOM is fully loaded
+        window.addEventListener('DOMContentLoaded', function() {
+            const grab = document.getElementById('welcomething');
+            grab.addEventListener('click', function() {
+                window.location.href = "home.html";
+            });
+        });
+    </script>
+</head>
+<body id="welcomething", class="clickgrabber">
+    <div>
+        <div class="fancy-welcome-div" id="welcome">
             <p>Welcome</p>
+            <div class="smallwelc">
+                <p>Press <a href="funy.png" class="button">anywhere</a> to continue...</p>
+            </div>
         </div>
-        <div class="smallwelc">
-            <p>Press <a href="funy.png"class="button">anywhere</a> to continue...</p>
-        </div>
-        
-    </body>
+    </div>
+</body>
 </html>

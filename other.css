@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'delta_ray_bevel_italicregular';
+    src: url('deltaraybevelital-webfont.woff2') format('woff2'),
+         url('deltaraybevelital-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+ul {
+  list-style-type: none;
+  position: fixed;
+  right: 10px;
+  top:30px;
+  padding: 0px;
+}
+
+li {
+  display: inline;
+  position: sticky;
+  margin-left: 10px;
+}
+li::before {
+    content: "| ";
+    color: #000;
+    display: inline-block;
+    font-size: 100%;
+    padding-left: 5px;
+}
+li::after {
+    content: " |";
+    color: #000;
+    display: inline-block;
+    font-size: 100%;
+    padding-right: 5px;
+  }
+
+.title {
+    font-family: 'delta_ray_bevel_italicregular';
+    font-size: 24px;
+    position: fixed;
+    white-space: nowrap;
+    top:10px;
+    left:20px;
+}
+.subtitle{
+  font-size: 18px;
+  position: fixed;
+  top:70px;
+}
+
+.mainpara{
+  position:fixed;
+  top: 120px;
+}
+.button {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button:hover {
+  color: white;
+}
+
+@font-face {
+    font-family: 'delta_rayregular';
+    src: url('deltaray-webfont.woff2') format('woff2'),
+         url('deltaray-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  background-color: #6B6259;
+  font-family: 'delta_rayregular';
+  color: black;
+}
+p {
+    color:black
+}
