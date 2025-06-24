@@ -7,61 +7,6 @@
 
 }
 
-ul {
-  list-style-type: none;
-  position: fixed;
-  right: 10px;
-  top:30px;
-  padding: 0px;
-}
-
-li {
-  display: inline;
-  position: sticky;
-  margin-left: 10px;
-}
-li::before {
-    content: "| ";
-    color: #000;
-    display: inline-block;
-    font-size: 100%;
-    padding-left: 5px;
-}
-li::after {
-    content: " |";
-    color: #000;
-    display: inline-block;
-    font-size: 100%;
-    padding-right: 5px;
-  }
-
-.title {
-    font-family: 'delta_ray_bevel_italicregular';
-    font-size: 24px;
-    position: fixed;
-    white-space: nowrap;
-    top:10px;
-    left:20px;
-}
-.subtitle{
-  font-size: 18px;
-  position: fixed;
-  top:70px;
-}
-
-.mainpara{
-  position:fixed;
-  top: 120px;
-}
-.button {
-  text-decoration: none;
-  color: inherit;
-}
-
-.button:hover {
-  color: white;
-}
-
 @font-face {
     font-family: 'delta_rayregular';
     src: url('deltaray-webfont.woff2') format('woff2'),
@@ -70,12 +15,114 @@ li::after {
     font-style: normal;
 
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.button {
+  text-decoration: none;
+  color: inherit;
+}
 
+.extra2{
+  padding:10px;
+  margin:10px;
+  margin-left:0px;
+  background-color:#000000;
+  color: white;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+}
+.button:hover {
+  color: white;
+}
+
+header{
+font-family: 'delta_ray_bevel_italicregular';
+margin-top: 20px;
+margin-left:20px;
+font-size: 50px;
+}
 body {
   background-color: #6B6259;
   font-family: 'delta_rayregular';
-  color: black;
 }
-p {
-    color:black
+
+nav{
+  background-color: #D2D1C8;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+  width:100px;
+  float: left;
+  padding:20px;
+  margin-left: 10px;
+  width:150px;
+}
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  nav {
+    left:0%;
+    clip-path: polygon(90% 0, 100% 20px, 100% 100%, 0 100%, 0 0);
+  }
+  article{
+    position:fixed;
+    margin-top:20px;
+    margin-bottom:10px;
+  }
+  .extra{
+    left: 0%;
+    top:10px;
+    clip-path: polygon(95% 0, 100% 20px, 100% 100%, 0 100%, 0 0);
+  }
+
+}
+
+footer {
+  background-color: #a3a39f;
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  padding-top: 10px;
+  padding-left:10px;
+  text-align: left;
+  color: black;
+  bottom: 0;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+  float: left;
+}
+article{
+  color:white;
+  position:relative;
+  background-color: black;
+  padding:20px;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.extra{
+  padding:20px;
+  margin:10px;
+  background-color:#D2D1C8;
+  color: black;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+}
+section{
+    display: -webkit-flex;
+    display: flex;
+}
+.pad {
+  height: 80px;
+  width:100%;
+  background-color: #6B6259;
+}
+#vertipad {
+  height: 70px;
+  width:100%;
+  background-color: #6B6259;
+}
+
+.doublechamfer {
+clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
 }

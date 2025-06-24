@@ -20,7 +20,10 @@
   width: 100vw;
 }
 .fancy-welcome-div {
+  background-color: #D2D1C8;
+  padding:20px;
   font-family: 'delta_ray_bevel_italicregular';
+  clip-path: polygon(95% 0, 100% 20px, 100% 100%, 0 100%, 0 0);
   position: fixed;
   bottom:0;
   left:0;
@@ -33,14 +36,9 @@ html, body {
   margin:0px;
 }
 
-#welcome {
-  display:show;
-}
-#welcome.hidden{
-  display:hidden;
-}
 .button {
   text-decoration: none;
+  cursor: pointer;
   color: inherit;
 }
 
