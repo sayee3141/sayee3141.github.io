@@ -7,8 +7,20 @@
     <script>
         window.addEventListener('DOMContentLoaded', function() {
             const grab = document.getElementById('welcomething');
+            if (!grab) return;
             grab.addEventListener('click', function() {
-                window.location.href = "home.html";
+                const items = document.querySelectorAll('.fancy-welcome-div');
+                items.forEach(function(el) {
+                    if (el.classList && typeof el.classList.replace === 'function') {
+                        el.classList.replace('fancy-welcome-div', 'exit-div');
+                    } else {
+                        el.classList.remove('fancy-welcome-div');
+                        el.classList.add('exit-div');
+                    }
+                });
+                setTimeout(function() {
+                    window.location.href = 'home.html';
+                }, 300);
             });
         });
     </script>

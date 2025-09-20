@@ -7,6 +7,7 @@
 
 }
 
+
 @font-face {
     font-family: 'delta_rayregular';
     src: url('deltaray-webfont.woff2') format('woff2'),
@@ -29,7 +30,53 @@
   left:0;
   font-size: 60px;
   padding-left: 20px;
-  
+  animation-name: welcomeBox;
+  animation-timing-function: linear;
+  animation-duration: 0.6s;
+}
+.exit-div {
+  background-color: #D2D1C8;
+  padding:20px;
+  font-family: 'delta_ray_bevel_italicregular';
+  clip-path: polygon(95% 0, 100% 20px, 100% 100%, 0 100%, 0 0);
+  position: fixed;
+  bottom:0;
+  left:0;
+  font-size: 60px;
+  padding-left: 20px;
+  animation-name: exit;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+}
+
+@keyframes welcomeBox{
+  0%   {transform:translate(-1000px, 0px)}
+  50%  {transform:translate(0px, 0px)}
+  52.5% { transform: translate(-1px, -2px)}
+  55% { transform: translate(-3px, 0px)}
+  57.5% { transform: translate(3px, 2px)}
+  60% { transform: translate(1px, -1px)}
+  62.5% { transform: translate(-1px, 2px)}
+  65% { transform: translate(-3px, 1px)}
+  67.5% { transform: translate(3px, 1px)}
+  70% { transform: translate(-1px, -1px)}
+  72.5% { transform: translate(1px, 2px)}
+  75% { transform: translate(1px, -2px)}
+  77.5% { transform: translate(-1px, -2px)}
+  80% { transform: translate(-3px, 0px)}
+  82.5% { transform: translate(3px, 2px)}
+  85% { transform: translate(1px, -1px)}
+  87.5% { transform: translate(-1px, 2px)}
+  90% { transform: translate(-3px, 1px)}
+  92.5% { transform: translate(3px, 1px)}
+  95% { transform: translate(-1px, -1px)}
+  97.5% { transform: translate(1px, 2px)}
+  100% { transform: translate(1px, -2px)}
+}
+@keyframes exit{
+  0%   {transform:translate(0px, 0px)}
+  100%  {transform:translate(-500px, 0px)}
 }
 
 html, body {

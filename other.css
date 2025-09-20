@@ -25,6 +25,12 @@ html, body {
   color: inherit;
 }
 
+header{
+  animation-name: downward;
+  animation-timing-function: linear;
+  animation-duration: 0.6s;
+}
+
 .extra2{
   padding:10px;
   margin:10px;
@@ -56,6 +62,9 @@ nav{
   padding:20px;
   margin-left: 10px;
   width:150px;
+  animation-name: fromleft;
+  animation-timing-function: linear;
+  animation-duration: 0.6s;
 }
 @media (max-width: 600px) {
   section {
@@ -67,14 +76,20 @@ nav{
     clip-path: polygon(90% 0, 100% 20px, 100% 100%, 0 100%, 0 0);
   }
   article{
-    position:fixed;
     margin-top:20px;
     margin-bottom:10px;
+    /* play the fromright animation for 0.6s with linear timing */
+    animation-name: fromright;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
   }
   .extra{
     left: 0%;
     top:10px;
     clip-path: polygon(95% 0, 100% 20px, 100% 100%, 0 100%, 0 0);
+    animation-name: fromleft;
+    animation-timing-function: linear;
+    animation-duration: 0.6s;
   }
 
 }
@@ -91,15 +106,21 @@ footer {
   bottom: 0;
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
   float: left;
+  animation-name: upward;
+  animation-timing-function: linear;
+  animation-duration: 0.6s;
 }
 article{
   color:white;
-  position:relative;
   background-color: black;
   padding:20px;
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
   margin-right: 10px;
   margin-left: 10px;
+  /* play the fromright animation for 0.6s with linear timing */
+  animation-name: fromright;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
 }
 .extra{
   padding:20px;
@@ -107,6 +128,9 @@ article{
   background-color:#D2D1C8;
   color: black;
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+  animation-name: fromleft;
+  animation-timing-function: linear;
+  animation-duration: 0.6s;
 }
 section{
     display: -webkit-flex;
@@ -125,4 +149,104 @@ section{
 
 .doublechamfer {
 clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+}
+
+@keyframes downward{
+  0%   {transform:translate(0px, -1000px)}
+  50%  {transform:translate(0px, 0px)}
+  52.5% { transform: translate(-1px, -2px)}
+  55% { transform: translate(-3px, 0px)}
+  57.5% { transform: translate(3px, 2px)}
+  60% { transform: translate(1px, -1px)}
+  62.5% { transform: translate(-1px, 2px)}
+  65% { transform: translate(-3px, 1px)}
+  67.5% { transform: translate(3px, 1px)}
+  70% { transform: translate(-1px, -1px)}
+  72.5% { transform: translate(1px, 2px)}
+  75% { transform: translate(1px, -2px)}
+  77.5% { transform: translate(-1px, -2px)}
+  80% { transform: translate(-3px, 0px)}
+  82.5% { transform: translate(3px, 2px)}
+  85% { transform: translate(1px, -1px)}
+  87.5% { transform: translate(-1px, 2px)}
+  90% { transform: translate(-3px, 1px)}
+  92.5% { transform: translate(3px, 1px)}
+  95% { transform: translate(-1px, -1px)}
+  97.5% { transform: translate(1px, 2px)}
+  100% { transform: translate(1px, -2px)}
+}
+
+@keyframes upward{
+  0%   {transform:translate(0px, 500px)}
+  50%  {transform:translate(0px, 0px)}
+  52.5% { transform: translate(-1px, -2px)}
+  55% { transform: translate(-3px, 0px)}
+  57.5% { transform: translate(3px, 2px)}
+  60% { transform: translate(1px, -1px)}
+  62.5% { transform: translate(-1px, 2px)}
+  65% { transform: translate(-3px, 1px)}
+  67.5% { transform: translate(3px, 1px)}
+  70% { transform: translate(-1px, -1px)}
+  72.5% { transform: translate(1px, 2px)}
+  75% { transform: translate(1px, -2px)}
+  77.5% { transform: translate(-1px, -2px)}
+  80% { transform: translate(-3px, 0px)}
+  82.5% { transform: translate(3px, 2px)}
+  85% { transform: translate(1px, -1px)}
+  87.5% { transform: translate(-1px, 2px)}
+  90% { transform: translate(-3px, 1px)}
+  92.5% { transform: translate(3px, 1px)}
+  95% { transform: translate(-1px, -1px)}
+  97.5% { transform: translate(1px, 2px)}
+  100% { transform: translate(1px, -2px)}
+}
+
+@keyframes fromleft{
+  0%   {transform:translate(-1000px, 0px)}
+  50%  {transform:translate(0px, 0px)}
+  52.5% { transform: translate(-1px, -2px)}
+  55% { transform: translate(-3px, 0px)}
+  57.5% { transform: translate(3px, 2px)}
+  60% { transform: translate(1px, -1px)}
+  62.5% { transform: translate(-1px, 2px)}
+  65% { transform: translate(-3px, 1px)}
+  67.5% { transform: translate(3px, 1px)}
+  70% { transform: translate(-1px, -1px)}
+  72.5% { transform: translate(1px, 2px)}
+  75% { transform: translate(1px, -2px)}
+  77.5% { transform: translate(-1px, -2px)}
+  80% { transform: translate(-3px, 0px)}
+  82.5% { transform: translate(3px, 2px)}
+  85% { transform: translate(1px, -1px)}
+  87.5% { transform: translate(-1px, 2px)}
+  90% { transform: translate(-3px, 1px)}
+  92.5% { transform: translate(3px, 1px)}
+  95% { transform: translate(-1px, -1px)}
+  97.5% { transform: translate(1px, 2px)}
+  100% { transform: translate(1px, -2px)}
+}
+
+@keyframes fromright{
+  0%   {transform:translate(3000px, 0px)}
+  50%  {transform:translate(0px, 0px)}
+  52.5% { transform: translate(-1px, -2px)}
+  55% { transform: translate(-3px, 0px)}
+  57.5% { transform: translate(3px, 2px)}
+  60% { transform: translate(1px, -1px)}
+  62.5% { transform: translate(-1px, 2px)}
+  65% { transform: translate(-3px, 1px)}
+  67.5% { transform: translate(3px, 1px)}
+  70% { transform: translate(-1px, -1px)}
+  72.5% { transform: translate(1px, 2px)}
+  75% { transform: translate(1px, -2px)}
+  77.5% { transform: translate(-1px, -2px)}
+  80% { transform: translate(-3px, 0px)}
+  82.5% { transform: translate(3px, 2px)}
+  85% { transform: translate(1px, -1px)}
+  87.5% { transform: translate(-1px, 2px)}
+  90% { transform: translate(-3px, 1px)}
+  92.5% { transform: translate(3px, 1px)}
+  95% { transform: translate(-1px, -1px)}
+  97.5% { transform: translate(1px, 2px)}
+  100% { transform: translate(1px, -2px)}
 }
