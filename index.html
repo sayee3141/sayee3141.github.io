@@ -8,19 +8,19 @@
         window.addEventListener('DOMContentLoaded', function() {
             const grab = document.getElementById('welcomething');
             if (!grab) return;
-            grab.addEventListener('click', function() {
-                const items = document.querySelectorAll('.fancy-welcome-div');
-                items.forEach(function(el) {
-                    if (el.classList && typeof el.classList.replace === 'function') {
-                        el.classList.replace('fancy-welcome-div', 'exit-div');
-                    } else {
-                        el.classList.remove('fancy-welcome-div');
-                        el.classList.add('exit-div');
-                    }
-                });
-                setTimeout(function() {
-                    window.location.href = 'home.html';
-                }, 300);
+                grab.addEventListener('click', function() {
+                    const items = document.querySelectorAll('.fancy-welcome-div');
+                    items.forEach(function(el) {
+                        if (el.classList && typeof el.classList.replace === 'function') {
+                            el.classList.replace('fancy-welcome-div', 'exit-div');
+                        } else {
+                            el.classList.remove('fancy-welcome-div');
+                            el.classList.add('exit-div');
+                        }
+                    });
+                    setTimeout(function() {
+                        window.location.href = 'home.html';
+                    }, 300);
             });
         });
     </script>
@@ -29,7 +29,7 @@
     <div>
         <div class="fancy-welcome-div" id="welcome">
             <p>Welcome</p>
-                <p style="font-family: delta_rayregular; font-size:24px;">Press <a href="funy.png" class="button">anywhere</a> to continue...</p>
+                <p style="font-family: delta_rayregular; font-size:24px;">Press <a href="funny.html" class="button">anywhere</a> to continue...</p>
         </div>
     </div>
 </body>

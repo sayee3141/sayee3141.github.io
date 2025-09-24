@@ -15,6 +15,16 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'comfortaa_regular';
+    src: url('Comfortaa-Regular.woff2') format('woff2'),
+         url('Comfortaa-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -27,11 +37,12 @@ html, body {
 
 header{
   animation-name: downward;
-  animation-timing-function: linear;
+  animation-timing-function: cubic-bezier(0, 0, 0.75, 1);
   animation-duration: 0.6s;
 }
 
 .extra2{
+  font-family: "comfortaa_regular";
   padding:10px;
   margin:10px;
   margin-left:0px;
@@ -49,9 +60,10 @@ margin-top: 20px;
 margin-left:20px;
 font-size: 50px;
 }
+
 body {
   background-color: #6B6259;
-  font-family: 'delta_rayregular';
+  font-family: 'comfortaa_regular';
 }
 
 nav{
@@ -63,8 +75,8 @@ nav{
   margin-left: 10px;
   width:150px;
   animation-name: fromleft;
-  animation-timing-function: linear;
-  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0, 0, 0.75, 1);
+  animation-duration: 1.5s;
 }
 @media (max-width: 600px) {
   section {
@@ -78,18 +90,13 @@ nav{
   article{
     margin-top:20px;
     margin-bottom:10px;
-    /* play the fromright animation for 0.6s with linear timing */
     animation-name: fromright;
-    animation-duration: 0.6s;
-    animation-timing-function: linear;
   }
   .extra{
     left: 0%;
     top:10px;
     clip-path: polygon(95% 0, 100% 20px, 100% 100%, 0 100%, 0 0);
     animation-name: fromright;
-    animation-timing-function: linear;
-    animation-duration: 0.6s;
   }
 
 }
@@ -107,8 +114,7 @@ footer {
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
   float: left;
   animation-name: upward;
-  animation-timing-function: linear;
-  animation-duration: 0.6s;
+  animation-duration: 1.25s;
 }
 article{
   color:white;
@@ -117,10 +123,8 @@ article{
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
   margin-right: 10px;
   margin-left: 10px;
-  /* play the fromright animation for 0.6s with linear timing */
   animation-name: fromright;
-  animation-duration: 0.6s;
-  animation-timing-function: linear;
+  animation-duration: 0.75s;
 }
 .extra{
   padding:20px;
@@ -129,11 +133,11 @@ article{
   color: black;
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
   animation-name: fromright;
-    animation-timing-function: linear;
-    animation-duration: 0.6s;
+    ;
+    animation-duration: 1s;
 }
 section{
-    display: -webkit-flex;
+    display: webkit-flex;
     display: flex;
 }
 .pad {
@@ -153,100 +157,20 @@ clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
 
 @keyframes downward{
   0%   {transform:translate(0px, -1000px)}
-  50%  {transform:translate(0px, 0px)}
-  52.5% { transform: translate(-1px, -2px)}
-  55% { transform: translate(-3px, 0px)}
-  57.5% { transform: translate(3px, 2px)}
-  60% { transform: translate(1px, -1px)}
-  62.5% { transform: translate(-1px, 2px)}
-  65% { transform: translate(-3px, 1px)}
-  67.5% { transform: translate(3px, 1px)}
-  70% { transform: translate(-1px, -1px)}
-  72.5% { transform: translate(1px, 2px)}
-  75% { transform: translate(1px, -2px)}
-  77.5% { transform: translate(-1px, -2px)}
-  80% { transform: translate(-3px, 0px)}
-  82.5% { transform: translate(3px, 2px)}
-  85% { transform: translate(1px, -1px)}
-  87.5% { transform: translate(-1px, 2px)}
-  90% { transform: translate(-3px, 1px)}
-  92.5% { transform: translate(3px, 1px)}
-  95% { transform: translate(-1px, -1px)}
-  97.5% { transform: translate(1px, 2px)}
-  100% { transform: translate(1px, -2px)}
+  100%  {transform:translate(0px, 0px)}
 }
 
 @keyframes upward{
   0%   {transform:translate(0px, 500px)}
-  50%  {transform:translate(0px, 0px)}
-  52.5% { transform: translate(-1px, -2px)}
-  55% { transform: translate(-3px, 0px)}
-  57.5% { transform: translate(3px, 2px)}
-  60% { transform: translate(1px, -1px)}
-  62.5% { transform: translate(-1px, 2px)}
-  65% { transform: translate(-3px, 1px)}
-  67.5% { transform: translate(3px, 1px)}
-  70% { transform: translate(-1px, -1px)}
-  72.5% { transform: translate(1px, 2px)}
-  75% { transform: translate(1px, -2px)}
-  77.5% { transform: translate(-1px, -2px)}
-  80% { transform: translate(-3px, 0px)}
-  82.5% { transform: translate(3px, 2px)}
-  85% { transform: translate(1px, -1px)}
-  87.5% { transform: translate(-1px, 2px)}
-  90% { transform: translate(-3px, 1px)}
-  92.5% { transform: translate(3px, 1px)}
-  95% { transform: translate(-1px, -1px)}
-  97.5% { transform: translate(1px, 2px)}
-  100% { transform: translate(1px, -2px)}
+  100%  {transform:translate(0px, 0px)}
 }
 
 @keyframes fromleft{
   0%   {transform:translate(-1000px, 0px)}
-  50%  {transform:translate(0px, 0px)}
-  52.5% { transform: translate(-1px, -2px)}
-  55% { transform: translate(-3px, 0px)}
-  57.5% { transform: translate(3px, 2px)}
-  60% { transform: translate(1px, -1px)}
-  62.5% { transform: translate(-1px, 2px)}
-  65% { transform: translate(-3px, 1px)}
-  67.5% { transform: translate(3px, 1px)}
-  70% { transform: translate(-1px, -1px)}
-  72.5% { transform: translate(1px, 2px)}
-  75% { transform: translate(1px, -2px)}
-  77.5% { transform: translate(-1px, -2px)}
-  80% { transform: translate(-3px, 0px)}
-  82.5% { transform: translate(3px, 2px)}
-  85% { transform: translate(1px, -1px)}
-  87.5% { transform: translate(-1px, 2px)}
-  90% { transform: translate(-3px, 1px)}
-  92.5% { transform: translate(3px, 1px)}
-  95% { transform: translate(-1px, -1px)}
-  97.5% { transform: translate(1px, 2px)}
-  100% { transform: translate(1px, -2px)}
+  100%  {transform:translate(0px, 0px)}
 }
 
 @keyframes fromright{
   0%   {transform:translate(3000px, 0px)}
-  50%  {transform:translate(0px, 0px)}
-  52.5% { transform: translate(-1px, -2px)}
-  55% { transform: translate(-3px, 0px)}
-  57.5% { transform: translate(3px, 2px)}
-  60% { transform: translate(1px, -1px)}
-  62.5% { transform: translate(-1px, 2px)}
-  65% { transform: translate(-3px, 1px)}
-  67.5% { transform: translate(3px, 1px)}
-  70% { transform: translate(-1px, -1px)}
-  72.5% { transform: translate(1px, 2px)}
-  75% { transform: translate(1px, -2px)}
-  77.5% { transform: translate(-1px, -2px)}
-  80% { transform: translate(-3px, 0px)}
-  82.5% { transform: translate(3px, 2px)}
-  85% { transform: translate(1px, -1px)}
-  87.5% { transform: translate(-1px, 2px)}
-  90% { transform: translate(-3px, 1px)}
-  92.5% { transform: translate(3px, 1px)}
-  95% { transform: translate(-1px, -1px)}
-  97.5% { transform: translate(1px, 2px)}
-  100% { transform: translate(1px, -2px)}
+  100%  {transform:translate(0px, 0px)}
 }
